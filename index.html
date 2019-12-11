@@ -8,17 +8,64 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/styles.css">
+    <script src="https://kit.fontawesome.com/5ae46afe61.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <h1>Password Generator</h1>
         <h2>Create a unique, random, and secure password</h2>
         <div class="d-flext justify-content-between">
-            <div class="m-5 p-2 card">
-                <input  type="text" placeholder="Password Generator"/>
+            <div class="input-group m-5">
+                <input id="password" type="text" class="form-control" aria-label="Example text with two button addons"
+                aria-describedby="button-addon3">
+                <div class="input-group-append" id="button-addon3">
+                    <button class="btn btn-outline-secondary" onclick="copyPassword();" type="button" data-toggle="tooltip" data-placement="bottom" title="Copy"><i class="far fa-copy"></i></button>
+                    <button class="btn btn-outline-secondary" type="button" onclick="generatePassword(passwordLength);" data-toggle="tooltip" data-placement="bottom" title="Generate"><i class="fas fa-sync"></i></button>
+                </div>
             </div>
             <div class="m-5 card">
-                password rules
+                <div class="d-flex justify-content-around">
+                    <form>
+                        <label for="passwordRange">Password Length:</label>
+                        <div class="row">
+                            <div class="form-group">
+                                <select class="form-control" id="exampleFormControlSelect1">
+    
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="range" min="8" max="120" class="form-control-range mx-2" id="passwordRange">
+                                <p id="sliderOutput"></p>
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                lowercase letters
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                uppercase letters
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                numbers
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                symbols
+                            </label>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="d-flex justify-content-center">
                 <button class="m-2 btn btn-danger">Generate Password</button>
@@ -27,6 +74,15 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
 </html>
