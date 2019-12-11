@@ -31,18 +31,6 @@ slider.oninput = function () {
 }
 
 
-// function to copy password to clipboard
-// NOT WORKING CURRENTLY
-function copyPassword() {
-    var copyText = document.getElementById("password");
-    copyText = select();
-    copyText = setSelectionRange(0, 99999);
-    document.execCommand("copy");
-    alert("Copied the password: " + copyText.value);
-}
-
-
-
 // function to generate unique password based on user selections
 function generatePassword(length) {
     var randomVal = '';
@@ -53,6 +41,8 @@ function generatePassword(length) {
             randomVal += char.charAt(Math.floor(Math.random() * char.length));
         }
     }
+
+    console.log(randomVal);
 
     for (var i = 0; i < length; i++) {
         assembleString(useLetters, letters);
@@ -69,6 +59,15 @@ function generatePassword(length) {
     input.value = password;
 
     return password;
+}
+
+// copy password value to clipboard
+function copyPassword() {
+    var copyText = document.getElementById("password");
+    copyText.select();
+    // copyText = setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert("Copied the password: " + copyText.value);
 }
 
 // console.log(generatePassword(passwordLength));
