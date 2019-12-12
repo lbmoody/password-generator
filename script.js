@@ -30,7 +30,7 @@ slider.oninput = function () {
 }
 
 
-// toggle checkboxes to allow different characters
+// toggle checkboxes to allow different
 function toggleLowerCase() {
     var checkBox = document.getElementById("lowerLetCheck");
     if (checkBox.checked) {
@@ -87,7 +87,9 @@ function generatePassword(length) {
         }
     }
 
-    console.log(randomVal);
+    if(!useLetters && !useUppercase && !useNumbers && !useSymbols) {
+        alert("No characters have been selected!");
+    }
 
     for (var i = 0; i < length; i++) {
         assembleString(useLetters, letters);

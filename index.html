@@ -12,32 +12,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>Password Generator</h1>
+        <h1 class="pt-5">Generate a Password</h1>
         <h2>Create a unique, random, and secure password</h2>
         <div>
-            <div class="input-group m-5 shadow">
-                <input id="password" type="text" class="form-control" placeholder="Generate a Password" aria-label="Example text with two button addons"
+            <div class="input-group mt-5 shadow">
+                <input id="password" type="text" class="p-4 form-control" aria-label="Example text with two button addons"
                 aria-describedby="button-addon3">
                 <div class="input-group-append" id="button-addon3">
-                    <button class="btn btn-light btn-outline-secondary" onclick="copyPassword();" type="button" data-toggle="tooltip" data-placement="bottom" title="Copy"><i class="far fa-copy"></i></button>
-                    <button class="btn btn-light btn-outline-secondary" type="button" onclick="generatePassword(passwordLength);" data-toggle="tooltip" data-placement="bottom" title="Generate"><i class="fas fa-sync"></i></button>
+                    <button class="btn btn-light btn-outline-primary" onclick="copyPassword();" type="button" data-toggle="tooltip" data-placement="bottom" title="Copy"><i class="far fa-copy"></i></button>
+                    <button class="btn btn-light btn-outline-primary" type="button" onclick="generatePassword(passwordLength);" data-toggle="tooltip" data-placement="bottom" title="Generate"><i class="fas fa-sync"></i></button>
                 </div>
             </div>
-            <div class="m-5 p-3 card shadow">
-                <div class="d-flex flex-wrap justify-content-around">
-                    <form>
-                        <label for="passwordRange">Password Length:</label>
-                        <div class="d-flex flex-wrap justify-content-between w-50">
-                            <div class="form-group">
+            <div class="my-5 py-4 card bg-light shadow">
+                <div class="d-flex flex-wrap justify-content-center w-100">
+                    <form class="w-50">
+                        <div class="row">
+                            <label class="title" for="passwordRange">Password Length:</label>
+                            <div class="form-group d-flex justify-content-around">
                                 <input class="p-2 passwordInput" type="number" id="passwordInput" min="8" max="120" value="12"/>
                             </div>
-                            <div class="form-group">
-                                <input type="range" value="12" min="8" max="120" class="form-control-range mx-2" id="passwordRange"/>
-                            </div>
+                        </div>
+                        <div class="form-group">
+                                <input type="range" value="12" min="8" max="120" class="form-control-range" id="passwordRange"/>
                         </div>
                     </form>
                     <div>
-                        <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                        <div class="custom-control custom-checkbox my-1 mr-md-2">
                             <input checked class="custom-control-input" type="checkbox" value="" id="lowerLetCheck" onclick="toggleLowerCase()">
                             <label class="custom-control-label" for="lowerLetCheck">
                                 lowercase letters
@@ -50,13 +50,13 @@
                             </label>
                         </div>
                         <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                            <input checked class="custom-control-input" type="checkbox" value="" id="numcheck">
+                            <input checked class="custom-control-input" type="checkbox" value="" id="numcheck" onclick="toggleNumbers()">
                             <label class="custom-control-label" for="numcheck">
                                 numbers
                             </label>
                         </div>
                         <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                            <input checked class="custom-control-input" type="checkbox" value="" id="symbCheck">
+                            <input checked class="custom-control-input" type="checkbox" value="" id="symbCheck" onclick="toggleSymbols()">
                             <label class="custom-control-label" for="symbCheck">
                                 symbols
                             </label>
@@ -72,14 +72,5 @@
     </div>
 
     <script type="text/javascript" src="./script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
 </body>
 </html>
