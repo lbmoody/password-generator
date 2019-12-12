@@ -24,18 +24,15 @@
                 </div>
             </div>
             <div class="m-5 p-3 card shadow">
-                <div class="d-flex justify-content-around">
+                <div>
                     <form>
                         <label for="passwordRange">Password Length:</label>
                         <div class="row">
                             <div class="form-group">
-                                <select class="form-control" id="exampleFormControlSelect1">
-    
-                                </select>
+                                <input class="p-2 passwordInput" type="number" id="passwordInput" min="8" max="120" value="12"/>
                             </div>
                             <div class="form-group">
-                                <input type="range" min="8" max="120" class="form-control-range mx-2" id="passwordRange">
-                                <p id="sliderOutput"></p>
+                                <input type="range" value="12" min="8" max="120" class="form-control-range mx-2" id="passwordRange"/>
                             </div>
                         </div>
                     </form>

@@ -9,3 +9,13 @@ h1, h2 {
 /* .form-control-range {
     width: 50%;
 } */
+
+.passwordInput {
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    background-color: #fff;
+    color: #495057;
+    font-family: inherit;
+    width: 30%;
+
+}

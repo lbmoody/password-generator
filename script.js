@@ -22,13 +22,22 @@ function passwordLengthOptions() {
 
 var slider = document.getElementById("passwordRange");
 var sliderOutput = document.getElementById("sliderOutput");
-sliderOutput.innerHTML = passwordLength;
+var passwordInput = document.getElementById("passwordInput");
+// sliderOutput.innerHTML = passwordInput.innerHTML = passwordLength;
 
-slider.oninput = function () {
-    sliderOutput.innerHTML = this.value;
+
+passwordInput.oninput = function () {
+    document.getElementById("passwordRange").value = this.value;
     passwordLength = this.value;
     return passwordLength;
 }
+
+slider.oninput = function () {
+    document.getElementById("passwordInput").value = this.value;
+    passwordLength = this.value;
+    return passwordLength;
+}
+
 
 
 // function to generate unique password based on user selections
