@@ -8,22 +8,13 @@ var useUppercase = true;
 var useNumbers   = true;
 var useSymbols   = true;
 
+
+// sets generic initial password length
 passwordLength = 12;
 
-function passwordLengthOptions() {
-    var lengthOptions = "<option value='0'>select</option>";
-    
-    for (i = 8; i <= 120; i++) {
-        lengthOptions += "<option value='" + i + "'>" + i + "</option>"
-    }
-
-    document.getElementById('exampleFormControlSelect1').innerHTML = lengthOptions;
-}
-
+// begins slider/input relationship and password length adjustments
 var slider = document.getElementById("passwordRange");
-var sliderOutput = document.getElementById("sliderOutput");
 var passwordInput = document.getElementById("passwordInput");
-// sliderOutput.innerHTML = passwordInput.innerHTML = passwordLength;
 
 
 passwordInput.oninput = function () {
@@ -38,6 +29,51 @@ slider.oninput = function () {
     return passwordLength;
 }
 
+
+// toggle checkboxes to allow different characters
+function toggleLowerCase() {
+    var checkBox = document.getElementById("lowerLetCheck");
+    if (checkBox.checked) {
+        useLetters = true;
+        return useLetters;
+    } else {
+        useLetters = false;
+        return useLetters;
+    }
+}
+
+function toggleUpperCase() {
+    var checkBox = document.getElementById("upperLetCheck");
+    if (checkBox.checked) {
+        useUppercase = true;
+        return useUppercase;
+    } else {
+        useUppercase = false;
+        return useUppercase;
+    }
+}
+
+function toggleNumbers() {
+    var checkBox = document.getElementById("numcheck");
+    if (checkBox.checked) {
+        useNumbers = true;
+        return useNumbers;
+    } else {
+        useNumbers = false;
+        return useNumbers;
+    }
+}
+
+function toggleSymbols() {
+    var checkBox = document.getElementById("symbCheck");
+    if (checkBox.checked) {
+        useSymbols = true;
+        return useSymbols;
+    } else {
+        useSymbols = false;
+        return useSymbols;
+    }
+}
 
 
 // function to generate unique password based on user selections

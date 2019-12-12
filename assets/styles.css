@@ -1,14 +1,12 @@
+/* body {
+    background-image: linear-gradient(-225deg, #ced4da 0%, #FFE6FA 100%);    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+} */
+
 h1, h2 {
     text-align: center;
 }
-/* 
-.card {
-    width: 80%;
-} */
-
-/* .form-control-range {
-    width: 50%;
-} */
 
 .passwordInput {
     border: 1px solid #ced4da;
@@ -17,5 +15,8 @@ h1, h2 {
     color: #495057;
     font-family: inherit;
     width: 30%;
+}
 
+label {
+    color: #495057;
 }
